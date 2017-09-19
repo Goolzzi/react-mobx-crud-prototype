@@ -11,7 +11,7 @@ class UserDetail extends Component{
         this.props.appState.updateUser(this.user, this.props.user.index);
     }
     removeUser() {
-        this.props.appState.removeUser(this.user, this.props.user.index);
+        this.props.appState.removeUser(this.props.user.index);
     }
     @computed get user() {
         if (!this.props.user){
