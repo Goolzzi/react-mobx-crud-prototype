@@ -18,5 +18,8 @@ class AppState {
             ...user
         }
     }
+    removeUser(user, index) {
+        this.userList.splice(index, 1);
+    }
 }
 export default AppState;

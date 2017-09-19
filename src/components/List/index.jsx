@@ -14,8 +14,9 @@ class UserList extends Component{
             age: '',
             gender: ''
         }
+        let index = this.props.appState.userList.length;
         this.props.appState.setUsers(user);
-        this.props.appState.setCurrentUser(user);
+        this.props.appState.setCurrentUser(user, index);
     }
     render() {
         return (

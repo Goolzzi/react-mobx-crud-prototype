@@ -10,6 +10,9 @@ class UserDetail extends Component{
     saveUser() {
         this.props.appState.updateUser(this.user, this.props.user.index);
     }
+    removeUser() {
+        this.props.appState.removeUser(this.user, this.props.user.index);
+    }
     @computed get user() {
         if (!this.props.user){
             return {};
@@ -57,6 +60,7 @@ class UserDetail extends Component{
                     </Input>
                 </FormGroup>
                 <Button onClick={() => this.saveUser()}>Save</Button>
+                <Button color="danger" onClick={() => this.removeUser()}>Remove this User</Button>
             </Form>
         )
     }
